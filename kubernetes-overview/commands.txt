@@ -1,0 +1,28 @@
+
+
+minikube dashboard
+
+# Start/stop cluster:
+
+minikube start
+minikube stop
+
+
+Thay đổi cấu hình, ví dụ như memory (bạn cần restart lại để có thể sử dụng được config này)
+
+minikube config set memory XXXXX 
+
+minikube delete --all
+
+minikube kubectl -- create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.
+minikube kubectl -- expose deployment hello-minikube --type=NodePort --port=8080
+
+
+kiểm tra tình trạng deployment
+
+ minikube kubectl get services
+
+
+ Và để chạy service lên thì bạn sẽ cần chạy câu lệnh 
+ 
+ minikube service hello-minikube
