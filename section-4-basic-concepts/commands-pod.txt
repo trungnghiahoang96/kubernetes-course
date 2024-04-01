@@ -1,0 +1,26 @@
+
+
+kubectl get pods
+
+create new pod with nginx image
+
+kubectl run nginx-demo --image=nginx
+
+
+kubectl apply -f pod.yaml
+
+
+# debug every where
+kubectl describe pod/pod_name
+
+
+kubectl get pods -o wide
+
+kubectl describe pod webapp | grep "something"
+
+kubectl pod webapp
+
+
+
+kubectl run redis --image=redis123
+
